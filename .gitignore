@@ -3,3 +3,12 @@
 ################################################################################
 
 /.vs/ComputerGraphics/v16/Server/sqlite3
+/ComputerGraphics/bin/Debug/ComputerGraphics.pdb
+/ComputerGraphics/bin/Debug/ComputerGraphics.exe.config
+/ComputerGraphics/bin/Debug/ComputerGraphics.exe
+/ComputerGraphics/obj/Debug
+/.vs/ComputerGraphics/v16
+/ComputerGraphics/bin/Debug/Tao.OpenGl.xml
+/ComputerGraphics/bin/Debug/Tao.OpenGl.dll
+/ComputerGraphics/bin/Debug/Tao.FreeGlut.xml
+/ComputerGraphics/bin/Debug/Tao.FreeGlut.dll

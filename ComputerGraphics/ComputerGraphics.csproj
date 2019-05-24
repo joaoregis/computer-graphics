@@ -51,6 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Casa.cs" />
+    <Compile Include="Telhado.cs" />
+    <Compile Include="Chao.cs" />
+    <Compile Include="BaseCasa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
