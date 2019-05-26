@@ -1,11 +1,12 @@
-﻿using Tao.FreeGlut;
+﻿using ComputerGraphics.UI;
+using Tao.FreeGlut;
 using Tao.OpenGl;
 
-namespace ComputerGraphics
+namespace ComputerGraphics.Scenario
 {
-    public static class BaseCasa
+    public class ControlTowerFoundation : Renderable
     {
-        public static void Render ()
+        public override void Render()
         {
             Gl.glPushMatrix();
             Gl.glColor3f(0.0f, 1.0f, 0.0f);

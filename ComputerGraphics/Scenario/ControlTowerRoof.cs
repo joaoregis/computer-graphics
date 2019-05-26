@@ -1,11 +1,12 @@
-﻿using Tao.FreeGlut;
+﻿using ComputerGraphics.UI;
+using Tao.FreeGlut;
 using Tao.OpenGl;
 
-namespace ComputerGraphics
+namespace ComputerGraphics.Scenario
 {
-    public static class Telhado
+    public class ControlTowerRoof : Renderable
     {
-        public static void Render ()
+        public override void Render()
         {
             Gl.glPushMatrix();
             Gl.glTranslatef(0.0f, 0.0f, 0.25f);
