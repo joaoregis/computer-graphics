@@ -29,6 +29,7 @@ namespace ComputerGraphics
             {
                 Glut.glutBitmapCharacter(Glut.GLUT_BITMAP_8_BY_13, str[i]);
             }
+
             Gl.glPopMatrix();
 
         }
@@ -65,9 +66,11 @@ namespace ComputerGraphics
         {
             int[] sceneKeys = { Glut.GLUT_KEY_UP, Glut.GLUT_KEY_DOWN, Glut.GLUT_KEY_LEFT, Glut.GLUT_KEY_RIGHT };
             int[] airplaneKeys = { Glut.GLUT_KEY_F1, Glut.GLUT_KEY_F2, Glut.GLUT_KEY_F3, Glut.GLUT_KEY_F4 };
+            int[] towerskeys = { Glut.GLUT_KEY_F5 };
 
             KeyboardHandler.RegisterMethod(scene.KeyboardHandler, sceneKeys);
             KeyboardHandler.RegisterMethod(airplane.KeyboardHandler, airplaneKeys);
+            KeyboardHandler.RegisterMethod(Scene.towersGroup.KeyboardHandler, towerskeys);
 
             Glut.glutPassiveMotionFunc(airplane.MouseHandler);
 
@@ -107,7 +110,7 @@ namespace ComputerGraphics
             Glut.glutInitDisplayMode(Glut.GLUT_DEPTH | Glut.GLUT_DOUBLE | Glut.GLUT_RGB);
             Glut.glutInitWindowSize(1024, 700);
             //Glut.glutInitWindowPosition(150, 0);
-            Glut.glutInitWindowPosition(250, 0);
+            Glut.glutInitWindowPosition(150, 0);
             Glut.glutCreateWindow("Computação Gráfica");
 
             ContentManager.SetModelList("modelos\\");
@@ -124,7 +127,7 @@ namespace ComputerGraphics
             Glu.gluLookAt(0.0, 1.0, 8.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 
             Gl.glClearColor(0.498039f, 1, 0.831373f, 0.0f);
-            Glut.glutTimerFunc(300, airplane.Timer, 1);
+            Glut.glutTimerFunc(1, airplane.Timer, 1);
 
             Gl.glEnable(Gl.GL_DEPTH_TEST);
             Glut.glutDisplayFunc(Render);

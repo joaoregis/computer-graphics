@@ -12,7 +12,10 @@ namespace ComputerGraphics.Scenario
         static float cameraVelocity = 5f;
 
         private static readonly Ground ground = new Ground();
-        private static readonly TowersGroup towersGroup = new TowersGroup();
+        public static readonly TowersGroup towersGroup = new TowersGroup();
+        public static readonly TreesGroup treesGroup = new TreesGroup();
+        private static readonly Road road = new Road();
+        private static readonly Faixa faixa = new Faixa();
 
         public override void Render()
         {
@@ -26,9 +29,19 @@ namespace ComputerGraphics.Scenario
 
             ground.Render();
             towersGroup.Render();
+            treesGroup.Render();
+
+            Gl.glPushMatrix();
+            Gl.glTranslatef(0, -0.7f, 0);
+            road.Render();
+
+            Gl.glTranslatef(0, 0.46f, 0);
+            faixa.Render();
+            Gl.glPopMatrix();
 
             Gl.glPopMatrix();
 
+            Gl.glPopMatrix();
             Gl.glPopMatrix();
 
         }
@@ -54,9 +67,6 @@ namespace ComputerGraphics.Scenario
                     break;
 
             }
-
-            Console.WriteLine("X " + rotationX);
-            Console.WriteLine("Y " + rotationY);
 
         }
     }

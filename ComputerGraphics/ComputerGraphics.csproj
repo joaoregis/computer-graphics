@@ -59,10 +59,14 @@
     <Compile Include="Scenario\ControlTowerFoundation.cs" />
     <Compile Include="Scenario\ControlTower.cs" />
     <Compile Include="Scenario\Ground.cs" />
+    <Compile Include="Scenario\Faixa.cs" />
+    <Compile Include="Scenario\Road.cs" />
     <Compile Include="Scenario\Scene.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenario\TreesGroup.cs" />
     <Compile Include="Scenario\TowersGroup.cs" />
+    <Compile Include="Scenario\Tree.cs" />
     <Compile Include="UI\IKeyboardControl.cs" />
     <Compile Include="UI\Renderable.cs" />
   </ItemGroup>

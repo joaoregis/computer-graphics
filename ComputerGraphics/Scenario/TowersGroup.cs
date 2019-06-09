@@ -1,28 +1,52 @@
 ﻿using ComputerGraphics.UI;
+using System;
 using Tao.OpenGl;
 
 namespace ComputerGraphics.Scenario
 {
-    class TowersGroup : Renderable
+    public class TowersGroup : Renderable, IKeyboardControl
     {
         private static readonly ControlTower tower = new ControlTower();
 
+        ControlTower[] towers = new ControlTower[16];
+
+        bool chave = false;
+
+        public TowersGroup ()
+        {
+            for (int i = 0; i < 16; i++)
+                towers[i] = new ControlTower();
+
+        }
+
+        public void KeyboardHandler(int key)
+        {
+            switch (key)
+            {
+                case Glut.GLUT_KEY_F5:
+                    chave = !chave;
+                    break;
+            }
+
+            Glut.glutPostRedisplay();
+
+        }
+
         public override void Render()
         {
-            Gl.glPushMatrix();
-            Gl.glTranslatef(5f, 0f, 0.3f);
-            tower.Render();
-            Gl.glPopMatrix();
+            for (int i = 0; i < 8; i++)
+            {
 
-            Gl.glPushMatrix();
-            Gl.glTranslatef(5f, 0f, -0.6f);
-            tower.Render();
-            Gl.glPopMatrix();
+                Gl.glPushMatrix();
+                Gl.glTranslatef(4.4f - i * 1.7f, 0f, 1.5f);
+                towers[i].Render(chave);
+                Gl.glPopMatrix();
+                Gl.glPushMatrix();
+                Gl.glTranslatef(4.4f - i * 1.7f, 0f, -1.5f);
+                towers[i+1].Render(chave);
+                Gl.glPopMatrix();
 
-            Gl.glPushMatrix();
-            Gl.glTranslatef(5.1f, 0f, 2f);
-            tower.Render();
-            Gl.glPopMatrix();
+            }
 
         }
     }
