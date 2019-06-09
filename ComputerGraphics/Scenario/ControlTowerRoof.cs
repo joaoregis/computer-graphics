@@ -1,5 +1,4 @@
 ﻿using ComputerGraphics.UI;
-using Tao.FreeGlut;
 using Tao.OpenGl;
 
 namespace ComputerGraphics.Scenario

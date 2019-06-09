@@ -1,7 +1,10 @@
-﻿namespace ComputerGraphics.UI
+﻿using ShadowEngine.ContentLoading;
+
+namespace ComputerGraphics.UI
 {
     public abstract class Renderable
     {
-        public abstract void Render();
+        public virtual void Render() { }
+        public virtual void Render(ModelContainer m) { }
     }
 }
