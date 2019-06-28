@@ -92,11 +92,16 @@ namespace ComputerGraphics.Elements
             Gl.glTranslatef(0.0f, 0f, tz);
 
             Gl.glPushMatrix();
+
+
             float[] qaRed = { 0.156863f, 0.156863f, 0.156863f, 1f };
             float[] qaBlack = { 0f, 0f, 0f, 0.5f };
             Gl.glMaterialfv(Gl.GL_FRONT, Gl.GL_AMBIENT, qaRed);
             Gl.glMaterialfv(Gl.GL_FRONT, Gl.GL_DIFFUSE, qaRed);
             Gl.glMaterialfv(Gl.GL_FRONT, Gl.GL_SPECULAR, qaBlack);
+
+
+
             Gl.glScalef(scale, scale, scale);
             Gl.glPushMatrix();
             Gl.glRotatef(mouseY, 1f, 0f, 0f);

@@ -1,5 +1,4 @@
 ﻿using ComputerGraphics.UI;
-using System;
 using Tao.OpenGl;
 
 namespace ComputerGraphics.Scenario
@@ -8,13 +7,13 @@ namespace ComputerGraphics.Scenario
     {
         private static readonly ControlTower tower = new ControlTower();
 
-        ControlTower[] towers = new ControlTower[16];
+        ControlTower[] towers = new ControlTower[14];
 
         bool chave = false;
 
         public TowersGroup ()
         {
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < 14; i++)
                 towers[i] = new ControlTower();
 
         }
@@ -34,7 +33,7 @@ namespace ComputerGraphics.Scenario
 
         public override void Render()
         {
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 7; i++)
             {
 
                 Gl.glPushMatrix();
@@ -47,7 +46,6 @@ namespace ComputerGraphics.Scenario
                 Gl.glPopMatrix();
 
             }
-
         }
     }
 }
